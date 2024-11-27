@@ -1,0 +1,5 @@
+J'ai décider de réaliser mon projet de site internet sur le thème des voitures car j'aime enormement ça. 
+Etant quelqu'un qui a deja coder de nombreuses fois en python pour des projets perso j'ai beaucoup aimer ce projet qui a fait que j'ai du réapprendre quelques 
+petites choses en html css et un peu javascript, je me suis aider des videos de Grafikart, de w3School et des connaissances que j'avais deja acquises avant.
+
+J'ai mis dans mon code tout ce qui était demander et ai ajouter comme dis dans le bonus un design approfondi et des styles CSS dépendnts de pseudo-classes.

@@ -1,0 +1,340 @@
+@font-face {
+    font-family: 'Raleway';
+    src: url('../fonts/pi/Silkscreen-Regular.woff2') format('woff2'),
+        url('../fonts/pi/Silkscreen-Regular.woff2') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+
+    font-family: 'Raleway';
+    src: url('../fonts/pi/Silkscreen-Bold.woff2') format('woff2'),
+        url('../fonts/pi/Silkscreen-Bold.woff2') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+*{
+    color: rgb(255, 255, 255);
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body{
+	font-family: 'Raleway';
+    background-color: #000;
+    margin: 0px;
+    padding-top: 150px;
+}
+
+
+*{
+	font-size:18px;
+    box-sizing: border-box;
+}
+
+
+
+main > h1{
+	font-size: 3rem;
+}
+
+
+section > h1{
+	font-size: 2rem;
+
+}
+
+figcaption{
+	font-size: 0.9rem;
+
+}
+
+figure{
+    margin: 0;
+}
+
+p{
+	line-height: 1.5;
+}
+
+    header{
+        display: fixed;
+        background-image: url("https://images.caradisiac.com/images/8/7/7/0/78770/S1-R32-GT-R-Appelez-moi-Zilla-Godzilla-265318.jpg");
+        background-size: cover;
+        background-position: center;
+        color: rgb(255, 255, 255);
+        padding: 100px;
+        border: solid 20px black;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 99;
+
+    }
+
+    header nav a{
+        text-decoration: none;
+        text-transform: uppercase;
+        color: rgb(255, 255, 255);
+        font-size: 20px;
+        display: block;
+        padding: 1em;
+        }
+
+    header nav a:hover{
+        text-decoration: underline;
+        text-transform: uppercase;
+        display: block;
+        color: rgb(255, 251, 0);
+        transform: translateY(-10px) translateX(5px);
+        transition: color , 0.5s;
+    }
+
+    footer{
+        background-image: url("https://media.giphy.com/media/qMSU6nMrMWJlQMbqFd/giphy.gif?cid=790b7611fupdr33zmhf8vmp7f1dhnfsl4vd7hxto3csbfy24&ep=v1_gifs_search&rid=giphy.gif&ct=g");
+        background-size: cover;
+        background-position: center;
+        color: rgb(255, 255, 255);
+        padding: 30px; 
+        border: solid 20px black;
+    }
+
+    footer p{
+        font-size: 20px;
+        text-align: center;
+    }
+
+main{
+    padding: 30px;
+}
+
+.container{
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+.banner{
+    height : 100vh;
+    background-image: url("https://media.giphy.com/media/k2evHZ2EvAV5m/giphy.gif?cid=790b7611fupdr33zmhf8vmp7f1dhnfsl4vd7hxto3csbfy24&ep=v1_gifs_search&rid=giphy.gif&ct=g");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    transition: 1s;
+}
+
+.banner:active {
+    transform: translateY(13vh);
+    z-index: 1000;
+}
+
+
+
+.BannerBottom{
+    height : 100vh;
+    background-image: url("https://media.giphy.com/media/qQM7QHr3TYFwI/giphy.gif?cid=790b7611ol5yh315ogbxq8u0rdo36w1flh67s6tc07mfvpck&ep=v1_gifs_search&rid=giphy.gif&ct=g");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    transition: 1s;
+}
+
+.BannerBottom:active{
+    transform: translateY(16vh);
+}
+
+
+ul{
+    list-style: none;
+}
+
+table{
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(37, 37, 37);
+    border-collapse: collapse;
+    width:  100%;
+}
+
+        td, th{
+            border-style: solid;
+            border-width: 1px;
+            border-color: rgb(43, 43, 43);
+            padding: 1em;
+        }
+
+            th{
+                background-image: url("https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNGliaHM4NnJtemM3anRzdDM4NXJjZ3U4M3czcGw5YWl3Yndua2NuYyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/DlXbiu2ZgpHlC/giphy.gif");
+                background-position: center;
+                background-size: 40vh;
+                height: 10vh;
+                
+            }
+            
+            td{
+                background-image: url("https://media.giphy.com/media/5psaWjwlPW2ju/giphy.gif?cid=790b7611en9ltzrd7yftd74va18ncwuor3ow7y8hqntvqwbm&ep=v1_gifs_search&rid=giphy.gif&ct=g");
+                background-position: bottom;
+                background-size: cover;
+                height: 30vh;
+            }
+
+
+        header .container{
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+            header nav ul{
+                display: flex;
+            }
+
+                .flexbox{
+                    display: flex;
+                    align-items: center;
+                }
+
+                    .flexbox figure{
+                        flex-basis: 35%;
+                        size: 10%;
+                    }
+
+                        .flexbox p{
+                            flex-basis: 65%;
+                        }
+
+                            figure img{
+                                width: 75%;
+                            }
+
+@media screen and (max-width: 1130px){
+
+    html{
+        font-size: 16px;
+    }
+
+    body{
+        padding-top: 110px;
+    }
+
+    .flexbox{
+        flex-direction: column;
+    }
+
+    .tablecontainer{
+        overflow: scroll;
+    }
+
+    *{
+        overflow-x: hidden;
+    }
+
+    header{
+        background-position: center;
+        background-image: cover;
+    }
+
+    .container img{
+        width: 40vh;
+        position: center;
+    }
+
+    header nav a{
+        display: none;
+    }
+
+    th{
+       height: 15vh;
+    }
+
+    td{
+        height: 30vh;
+    }
+
+    footer{
+        background-position: bottom;
+        background-size: 90vh;
+    }
+}
+
+
+
+    img{
+        background-color: transparent;
+    }
+
+
+
+
+
+/*JAVA SCRIPT*/
+
+
+.slide1{      /* texte 1 paragraph 2*/
+    transform: translateX(100vw);
+    transition: 1s;
+}
+.slide1.active1{
+    transform: translateX(0px);
+}
+
+
+
+.slide2{       /*texte 1 paragraph 1*/
+    transform: translateY(-10vh);
+    transition: 2s;
+    opacity: 0;
+}
+.slide2.active2{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+
+
+
+.slide3{        /*texte 2 paragraph 1*/
+    transform: translateX(100vw);
+    transition: 1s;
+}
+.slide3.active3{
+    transform: translateX(0px);
+}
+
+
+
+.slide4{        /*texte 1 paragraph 2 gauche image blanque*/
+    transform: translateX(-100vw);
+    transition: 1s;
+}
+.slide4.active4{
+    transform: translateX(0px);
+}
+
+
+
+.slide5{        /*texte 1 titre paragraph 2*/
+    transform: translateX(-100vw);
+    transition: 1s;
+}
+.slide5.active5{
+    transform: translateX(0px);
+}
+
+
+
+.slide6{        /*titre table et table*/
+    transform: translateY(-10vh);
+    transition: 1s;
+    opacity: 0;
+}
+.slide6.active6{
+    transform: translateY(0px);
+    opacity: 1;
+}

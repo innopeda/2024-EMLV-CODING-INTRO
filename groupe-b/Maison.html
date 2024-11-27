@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html">
+        <title>Astuces Maison</title>
+        <link href="style.css" rel="stylesheet">
+        <script type="text/javascript" src="scripts.js"></script>
+    </head>
+    <body>
+        <ul> 
+            <li><a class="active" href="index.html">Accueil</a></li>
+            <li><a href="Voiture.html">Voiture</a></li>
+            <li><a href="Plein air.html">Plein air</a></li>
+            <li><a href="Maison.html">Maison</a></li>
+            <li><a href="Nous contacter.html">Nous contacter</a></li>
+        </ul>
+        
+        <div id="astuces-script">
+            <table>
+                <tr>
+                    <td onclick="changeImg('./images/piege-moustiques.jpg')">Piège à Moustiques</td>
+                    <td onclick="changeImg('./images/nettoyant-multi-surfaces.jpg')">Nettoyant Multi-Surfaces</td>
+                    <td onclick="changeImg('./images/deshumidificateur.jpg')">Déshumidificateur</td>
+                    <td onclick="changeImg('./images/cirage.jpg')">Cirage Meuble</td>
+                    <td onclick="changeImg('./images/nettoyant-ecran.jpg')">Nettoyant écran télévision</td>
+                </tr>
+            </table>
+            <img id="astucesimg" src="./images/maison.jpeg" alt="Image d'astuce maison">
+        </div>
+        
+        <div class="signature">Créé par GILLIN Léa EMLV-A1</div>
+    </body>
+</html>

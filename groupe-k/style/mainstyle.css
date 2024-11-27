@@ -1,0 +1,871 @@
+/*Home*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    background-color: #121212;
+    color: #fff;
+}
+
+.flex {
+    display: flex;
+   justify-content: space-around;
+    align-items: center;
+}
+
+/*https://www.magicpattern.design/tools/css-backgrounds*/
+.bkg-style{
+background-color: #202020;
+opacity: 0.8;
+background-image:  linear-gradient(135deg, #151414 25%, transparent 25%), linear-gradient(225deg, #151414 25%, transparent 25%), linear-gradient(45deg, #151414 25%, transparent 25%), linear-gradient(315deg, #151414 25%, #202020 25%);
+background-position:  10px 0, 10px 0, 0 0, 0 0;
+background-size: 10px 10px;
+background-repeat: repeat;
+}
+.bkg-style-reco{
+    background-color: #952e2e;
+opacity: 0.7;
+background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #0c0c0b 16px ), repeating-linear-gradient( #0c0c0b55, #0c0c0b );
+}
+.bkg-style-sitographie{
+background-color: #1a1515 ;
+opacity: 0.7;
+background-image:  radial-gradient(#f11a15 0.8px, transparent 0.8px), radial-gradient(#f11a15 0.8px, #030202 0.8px);
+background-size: 32px 32px;
+background-position: 0 0,16px 16px; 
+}
+
+/** page HOME index **/
+
+/*** HEADER **/
+/* img banner accueil*/
+.imageaccueil {
+    position: relative;
+    width: 100%;
+    height: auto;
+    top: 0;
+    background: #151414;
+}
+.imageaccueil::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.9), /* Haut sombre */
+        rgba(0, 0, 0, 0.5) 30%, /* Transition vers le centre moins sombre */
+        rgba(0, 0, 0, 0.3) 70%, /* Transition vers les bords sombres */
+        rgba(0, 0, 0, 0.8) /* Bas sombre */
+    );
+    z-index: 1; /* Place le dégradé au-dessus de l'image */
+
+}
+
+.header-home {
+    position: relative;
+    z-index: 2;
+    width : 50%;
+   /*  background-color:rgba(0, 0, 0, 0.6); Arrière-plan semi-transparent */
+    text-align: center;
+    margin : 0 auto;
+    border-radius : 15px;
+    padding : 15px;
+    height: 450px
+}
+/* Survol Card de presentation */
+/*https://rgbacolorpicker.com/hex-to-rgba*/
+.descriptionHome:hover {
+    background-color:rgba(0, 0, 0, 0.6); /* Arrière-plan semi-transparent */
+    transition : color .3s ease-in-out, box-shadow .3s ease-in-out ;
+}
+
+/* bouton qui pulse - codepen */
+.btn-home {
+    position: relative;
+    width: 100%;
+    height: auto;
+    top: 0;
+    z-index: 3;
+}
+
+.pulse-icon,
+.pulse-icon::before,
+.pulse-icon::after {
+    left: 50%;
+    top: 50%;
+    margin-left: -20px;
+    margin-top: -20px;
+    position: absolute;
+    vertical-align: middle;
+    width: 40px;
+    background: #650006;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.pulse-icon::before {
+  content: "";
+  animation: bounce 2.5s infinite;
+}
+.pulse-icon::after {
+  content: "";
+  animation: bounce 2.5s -0.4s infinite;
+}
+.pulse-icon i.arrow {
+    color : #f8d8d8;
+    font-size: 18px;
+    padding: 10px 13px;
+}
+.pulse-icon i.eye {
+    color : #f8d8d8;
+    font-size: 18px;
+    padding: 10px;
+}
+.pulse-icon i.heart {
+    color : #f8d8d8;
+    font-size: 18px;
+    padding: 11px;
+}
+
+.pulse-icon-page,
+.pulse-icon-page::before,
+.pulse-icon-page::after {background: #ff9d00;}
+
+
+@keyframes bounce {
+  0% {
+    transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2);
+    -webkit-transform: scale(2);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2);
+    -webkit-transform: scale(2);
+    opacity: 0;
+  }
+}
+
+
+/** Logo **/
+.logo {
+    display: flex;
+    align-items: center;
+    width: 120px;
+    height: auto;
+    z-index: 2;
+}
+.logo img {
+    width: 100%;
+}
+
+/*** Menu Navigation **/
+.navigation {
+    z-index: 2;
+    width:50%;  
+    align-items: center;
+    padding: 20px;
+    border : 1px solid #534040
+}
+
+.barre {
+    width : 100%;
+    list-style: none;
+    display: flex;
+    font-size: 20px;
+}
+.barre li{
+    text-align: center;
+    width: 100%
+}
+
+.barre li:hover{
+      background-color:rgba(101, 0, 6, 0.3); /* Arrière-plan semi-transparent */
+    transition : color .3s ease-in-out, box-shadow .3s ease-in-out ;
+    border-radius: 5px
+}
+
+.barre a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+    display: block; /*astuce : permet de rendre tout le li cliquable */
+}
+
+.barre a:hover {
+    color:#fccbc8;
+}
+
+
+/* Card de presentation */
+.descriptionHome {
+    position: relative;
+    z-index: 2;
+    width : 70%;
+     background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0.1)); /*Dégradé*/
+    text-align: center;
+    margin : 0 auto;
+    padding : 15px
+}
+/* Survol Card de presentation */
+/*https://rgbacolorpicker.com/hex-to-rgba*/
+.descriptionHome:hover {
+    background-color:rgba(0, 0, 0, 0.6); /* Arrière-plan semi-transparent */
+    transition : color .3s ease-in-out, box-shadow .3s ease-in-out ;
+}
+
+.btn-explore{
+    width : 60%;
+    padding: 12px;
+    border-radius:2px;
+    margin: 0 auto 50px;
+    background: #ff9d00;
+    font-family: "Poppins", sans-serif;    
+}
+.btn-explore a{
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+    font-weight: 200
+}
+.btn-explore i{
+    padding: 0 4px 0 0
+}
+.btn-explore:hover{
+    background: #d9524a;
+}
+
+
+
+
+
+
+.titredescription {
+    font-size: 30px; 
+    font-weight: bold;
+    margin-bottom: 8px; /* Espace entre le titre et le texte de description */
+    color: #fff;
+    text-decoration: underline;
+}
+
+.titredescription a {
+    text-decoration: underline;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.titredescription a:hover {
+    color: rgb(81, 80, 80);
+}
+
+
+.description {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Arrière-plan semi-transparent */
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 400px;
+}
+
+.description p {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.notes {
+    display: flex;
+    justify-content: space-between; 
+    margin-top: 10px; 
+}
+
+.note {
+    background-color: rgba(255, 255, 255, 0.1); 
+    border-radius: 5px;
+    padding: 5px 10px; 
+    width: 45%;
+    text-align: center; 
+}
+
+
+
+.introduction {
+    width: 50%;
+    margin: 50px auto;
+    font-size: 25px; 
+    line-height: 1.5;
+    
+}
+
+/**** FOOTER ***/
+footer{
+    width: 100%;
+    padding : 2%;
+    font-family: "Poppins", sans-serif;
+}
+footer p {
+    text-align: center;
+}
+.basdepage {
+    display: flex;
+    justify-content: center; 
+    gap: 20px; /*Espace entre les liens*/
+    margin-bottom: 10px;
+}
+
+.basdepage a { 
+    color: #fff; 
+    font-weight: bold; 
+    transition: color 0.3s;
+}
+
+.basdepage a:hover {
+    color: #bc0e18
+}
+
+
+
+/*Recommandations*/
+
+/* Styles de base pour tout le site */
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right, rgba(34, 34, 34, 1), rgba(0, 0, 0, 1));
+    color: #fff;
+    background-color: #121212;
+}
+
+
+/* Section titre principal */
+.page-header {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.page-header h1 {
+    font-size: 48px;
+    color: #fff;
+}
+
+.titre {
+text-decoration: underline;
+}
+
+
+
+
+/* Section des recommandations */
+.recommandations {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px auto;
+}
+
+.categories {
+    width: 80%;
+    max-width: 600px;
+    margin-bottom: 30px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+.categories:hover{
+    background: rgba(240, 235, 141, 0.5)/* couleur de base : #f0eb8d*/
+}
+
+
+.categories h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.categories ul {
+    list-style: none;
+    padding: 0;
+}
+
+.categories li {
+    font-size: 22px;
+    margin: 5px 0;
+    color: #ccc;
+}
+.categories i{
+    font-size:55px
+}
+/*** Cartel HEADER PAGES **/
+
+.intro {
+    text-align: center;
+    margin: 30px auto;
+    width: 80%;
+    max-width: 800px;
+    line-height: 1.6;
+    background-color: rgba(255, 255, 255, 0.1);
+    background:linear-gradient(to bottom right, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.1)); /*Dégradé*/
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 2;
+}
+.intro:hover {
+    background:linear-gradient(to bottom right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.3)); /*Dégradé*/
+    
+}
+/*****Films*****/
+/* img banner film*/
+.imagefilm {
+    position: relative;
+    width: 100%;
+    height: auto; 
+    background: url(../img/hungergames.jpg) no-repeat center center/cover; 
+    top: 0;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-blend-mode: darken;
+}
+.imagefilm::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient( to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5) 30%, rgba(0, 0, 0, 0.3) 70%, rgba(0, 0, 0, 0.8) );
+    z-index: 1; /* Place le dégradé au-dessus de l'image */
+}
+.cat-film{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+}
+.cat-film li{
+   text-align: center;
+    padding: 15px;
+    width : 15%;
+    border: 1px dotted #FFF;
+}
+.cat-film li a{
+    color: #FFF;
+    font-size : 20px;
+    text-decoration: none   
+}
+.cat-film li:hover{
+   text-align: center;
+    padding: 15px;
+  /*  background: #FC0;*/
+    border: 1px dotted #f0eb8d;
+    background-color: rgba(240, 235, 141, 0.2);
+}
+.cat-film li:hover a{
+   text-shadow: 1px 1px 2px #650006, 0 0 1em #FC0, 0 0 0.2em #FC0;
+}
+/** Rangement catalogue - page FILMS **/
+.collones {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /*Quatre colonnes*/
+    gap: 20px; /*Espace entre les cases*/
+    padding: 10px;
+    width : 80%;
+    margin: 0 auto
+}
+/** Card film **/
+.film {
+    text-align: center;
+     border-radius: 8px; 
+    padding: 10px; 
+    background-color: rgba(0, 0, 0, 0.9);
+    box-shadow: 0px 5px 60px rgba(147, 133, 133, 0.4);
+    transition: transform 0.3s; /*Animation*/
+}
+
+.film:hover {
+    transform: scale(1.05); /*Agrandissement*/
+}
+.film p{
+    font-family: "Barlow Condensed", sans-serif;
+    font-size : 17px;
+}
+.film a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.film a:hover {
+    color: #f7e6a5;
+}
+
+
+.affiche {
+    width: 100%; 
+    height: auto; 
+    border-radius: 8px; 
+}
+
+
+/**** FICHE films ****/
+.cat{
+    width: 80%;
+    margin: 0 auto
+}
+.cat h2{
+    text-align: center;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 37px;
+    margin: 20px;
+    text-shadow: 0 20px 25px #2e2e31, 0 40px 60px #2e2e31;
+    
+}
+.fiche-film {
+    padding: 50px;
+    width:80%;
+    margin: 0 auto;
+    background: #040202
+}
+
+.title-ficheFilm {
+    font-weight: bold;
+    font-size: 40px;
+    font-family: "Barlow Condensed", sans-serif;
+}
+
+.poster-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 5px 60px rgba(147, 133, 133, 0.4);
+}
+    
+.poster {
+    width: 300px;
+    height: auto;
+}
+
+
+.descriptionfilm {
+    /*background:linear-gradient(to bottom right, rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0.1)); Dégradé*/
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.descriptionfilm p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.5;
+    text-align: justify;
+    font-family: "Poppins", sans-serif;
+}
+p.info-ficheFilm {
+    font-size: 18px; 
+    font-weight: bold;
+    margin-bottom: 8px; /* Espace entre le titre et le texte de description */
+    color: #fff;
+    text-decoration: underline;
+    font-family: "Poppins", sans-serif;
+}
+
+.notesfilm {
+    display: flex;
+    justify-content: space-between; 
+    margin-top: 10px; 
+}
+
+.notefilm {
+    background-color: rgba(250, 209, 37, 0.9); 
+    border-radius: 5px;
+    padding: 5px 10px; 
+    width: 45%;
+     
+}
+.notefilm p{
+    text-align: center;
+    color:#000 
+}
+
+.titlehunger {
+    font-size: 60px;
+    text-decoration: underline;
+    text-align: center;
+}
+
+
+
+/** PAGE CONTACT **/
+/** titres Contact **/
+h2.titrecontact{
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+}
+h3.titrecontact  {
+    font-size: 20px;
+    margin: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+}
+
+.contact {
+    margin: 0 auto;
+    padding: 5px;
+    width: 70%;
+}
+input, textarea {
+     width : 100%;
+    color:#000;
+    height: 50px;
+    margin : 15px auto;
+}
+label {
+    color: #EEE;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 25px;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+.contact ul  {
+    margin : 0 auto;
+    width:50%;
+}
+.contact ul li {
+    list-style: none
+}
+
+
+.reseau {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+
+.lien {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    background-color: #650006;
+    padding: 15px 30px;
+    border-radius: 30px;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.lien:hover {
+    background-color: #bc0e18;
+    transform: translateY(-5px); /* Effet de levée au hover */
+}
+/** Page Sitographie **/
+.refsite{
+    list-style-type: none;
+    font-size: 25px;
+    font-family: "Barlow Condensed", sans-serif;
+}
+.refsite li{
+    padding: 4px
+}
+.refsite li a{
+    color:#faf8e5;
+    text-shadow:1px 1px 2px #650006, 0 0 1em #FC0, 0 0 0.2em #FC0;
+    text-decoration: underline;
+}
+.refsite li a:hover{
+    color:#FFF;
+    text-decoration: underline
+}
+
+/** TABLETTE**/
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .navigation {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .barre {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        font-size: 18px;
+    }
+
+    .imageaccueil {
+        height: auto; /* Réduire la hauteur de l'image sur tablette */
+    }
+
+     .descriptionHome{
+        width : 70%
+    }
+    .description {
+        bottom: 10px;
+        right: 10px;
+        max-width: 90%;
+    }
+
+    .contenu {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    
+    .collones {
+        grid-template-columns: repeat(2, 1fr); /* Deux colonnes sur tablette */
+    }
+
+    .poster-container {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .title {
+        font-size: 60px; /* Taille du titre réduite pour tablette */
+    }
+
+    .descriptionfilm {
+        position: static;
+        margin: 20px 0;
+        max-width: 100%;
+    }
+
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/** SMARTPHONE**/
+@media (max-width: 480px) {
+    .navigation {
+        display: flex; /* Assurez-vous que le conteneur utilise flex */
+        justify-content: flex-end; /* Alignement à droite */
+        padding: 10px; /* Un peu d'espace autour */
+    }
+
+    .barre {
+        font-size: 16px; /* Réduire la taille des liens */
+        gap: 5px;
+    }
+
+      .barre li{
+       text-align: right
+    }
+
+    .imageaccueil {
+        height: auto; /* Réduire la hauteur de l'image sur smartphone */
+    }
+
+    .descriptionHome{
+        width : 100%
+    }
+    
+    h3 {
+        font-size: 30px; /* Réduire la taille du titre */
+    }
+     .introduction {
+        padding: 5px;
+        width: 100%;
+        font-size: 25px; /* Réduire la taille de la police de la description */
+    }
+    .description p {
+        margin: 0;
+        font-size: 14px; /* Ajuster la taille de la police dans le paragraphe */
+        line-height: 1.4; /* Ajuster l'interligne si nécessaire */
+        text-align: justify;
+    }
+    .btn-explore{
+        width : 100%
+    }
+    
+    .intro {
+        font-size: 16px; /* Réduire la taille de la police pour l'introduction */
+    }
+    
+    .collones {
+        grid-template-columns: 1fr; /* Une colonne sur smartphone */
+    }
+
+    .title {
+        font-size: 50px; /* Taille du titre réduite pour smartphone */
+        margin-top: 20px;
+    }
+
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .poster-container {
+        margin: 0;
+        padding: 10px;
+    }
+
+    .poster {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 20px;
+    }
+
+    .descriptionfilm {
+        position: static;
+        margin: 10px 0;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .notesfilm {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .notefilm {
+        width: 100%;
+    }
+    .cat-film{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    }
+    .cat-film li{
+        width:100%
+    }
+    
+}/* fin des déclarations pour smartphone*/
+

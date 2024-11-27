@@ -1,0 +1,340 @@
+@font-face {
+    font-family: 'Raleway';
+    src: url('../fonts/pi/Silkscreen-Regular.woff2') format('woff2'),
+        url('../fonts/pi/Silkscreen-Regular.woff2') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+
+    font-family: 'Raleway';
+    src: url('../fonts/pi/Silkscreen-Bold.woff2') format('woff2'),
+        url('../fonts/pi/Silkscreen-Bold.woff2') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+*{
+    color: rgb(255, 255, 255);
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body{
+	font-family: 'Raleway';
+    background-color: #000;
+    margin: 0px;
+    padding-top: 150px;
+}
+
+
+*{
+	font-size:18px;
+    box-sizing: border-box;
+}
+
+
+
+main > h1{
+	font-size: 3rem;
+}
+
+
+section > h1{
+	font-size: 2rem;
+
+}
+
+figcaption{
+	font-size: 0.9rem;
+
+}
+
+figure{
+    margin: 0;
+}
+
+p{
+	line-height: 1.5;
+}
+
+    header{
+        display: fixed;
+        background-image: url("https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM2x4NXV0cG1mcWxvN2RkamZjeG9pdW9oZ2RhanA1Mm82aXo5OG9sNyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/DAvA9wHaZ5lv2/giphy.gif");
+        background-size: cover;
+        background-position: center;
+        color: rgb(255, 255, 255);
+        padding: 100px;
+        border: solid 20px black;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 99;
+
+    }
+
+    header nav a{
+        text-decoration: none;
+        text-transform: uppercase;
+        color: rgb(255, 255, 255);
+        font-size: 20px;
+        display: block;
+        padding: 1em;
+        }
+
+    header nav a:hover{
+        text-decoration: underline;
+        text-transform: uppercase;
+        display: block;
+        color: rgb(255, 251, 0);
+        transform: translateY(-10px) translateX(5px);
+        transition: color , 0.5s;
+    }
+
+    footer{
+        background-image: url("https://media.giphy.com/media/7zk1WSFqSO6EJU3Teh/giphy.gif?cid=ecf05e47myk8hnrofzo9ty6q2blhzg0a3h7atferwe9h38hg&ep=v1_gifs_search&rid=giphy.gif&ct=g");
+        background-size: cover;
+        background-position: center;
+        color: rgb(255, 255, 255);
+        padding: 30px; 
+        border: solid 20px black;
+    }
+
+    footer p{
+        font-size: 20px;
+        text-align: center;
+    }
+
+main{
+    padding: 30px;
+}
+
+.container{
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+.banner{
+    height : 100vh;
+    background-image: url("https://media.giphy.com/media/6ggUlS0mn8uM65crxI/giphy.gif?cid=790b76113lx5utpmfqlo7ddjfcxoiuohgdajp52o6iz98ol7&ep=v1_gifs_search&rid=giphy.gif&ct=g");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    background-attachment: fixed;
+    transition: 1s;
+}
+
+.banner:active {
+    transform: translateY(13vh);
+    z-index: 1000;
+}
+
+
+
+.BannerBottom{
+    height : 100vh;
+    background-image: url("https://media.giphy.com/media/U8q0sfshS6vpmWl8WG/giphy.gif?cid=ecf05e4775k08nryoosuqj7d0kn1fcrqotusins7feb22krb&ep=v1_gifs_search&rid=giphy.gif&ct=g");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    transition: 1s;
+}
+
+.BannerBottom:active{
+    transform: translateY(16vh);
+}
+
+
+ul{
+    list-style: none;
+}
+
+table{
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(37, 37, 37);
+    border-collapse: collapse;
+    width:  100%;
+}
+
+        td, th{
+            border-style: solid;
+            border-width: 1px;
+            border-color: rgb(43, 43, 43);
+            padding: 1em;
+        }
+
+            th{
+                background-image: url("https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMWRnZHdlZnNnOGk0ZDVtdm5iM3RndTU1aTZlMTZucWFnc3U1b2JjaCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/nDxO7DZL7P2THOhyvf/giphy.gif");
+                background-position: center;
+                background-size: 40vh;
+                height: 10vh;
+                
+            }
+            
+            td{
+                background-image: url("https://media.giphy.com/media/Q4oM79JYzjlMQ/giphy.gif?cid=790b76111dgdwefsg8i4d5mvnb3tgu55i6e16nqagsu5obch&ep=v1_gifs_search&rid=giphy.gif&ct=g");
+                background-position: bottom;
+                background-size: cover;
+                height: 30vh;
+            }
+
+
+        header .container{
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+            header nav ul{
+                display: flex;
+            }
+
+                .flexbox{
+                    display: flex;
+                    align-items: center;
+                }
+
+                    .flexbox figure{
+                        flex-basis: 35%;
+                        size: 10%;
+                    }
+
+                        .flexbox p{
+                            flex-basis: 65%;
+                        }
+
+                            figure img{
+                                width: 75%;
+                            }
+
+@media screen and (max-width: 1130px){
+
+    html{
+        font-size: 16px;
+    }
+
+    body{
+        padding-top: 110px;
+    }
+
+    .flexbox{
+        flex-direction: column;
+    }
+
+    .tablecontainer{
+        overflow: scroll;
+    }
+
+    *{
+        overflow-x: hidden;
+    }
+
+    header{
+        background-position: center;
+        background-image: cover;
+    }
+
+    .container img{
+        width: 40vh;
+        position: center;
+    }
+
+    header nav a{
+        display: none;
+    }
+
+    th{
+       height: 15vh;
+    }
+
+    td{
+        height: 30vh;
+    }
+
+    footer{
+        background-position: bottom;
+        background-size: 90vh;
+    }
+}
+
+
+
+    img{
+        background-color: transparent;
+    }
+
+
+
+
+
+/*JAVA SCRIPT*/
+
+
+.slide1{      /* texte 1 paragraph 2*/
+    transform: translateX(100vw);
+    transition: 1s;
+}
+.slide1.active1{
+    transform: translateX(0px);
+}
+
+
+
+.slide2{       /*texte 1 paragraph 1*/
+    transform: translateY(-10vh);
+    transition: 2s;
+    opacity: 0;
+}
+.slide2.active2{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+
+
+
+.slide3{        /*texte 2 paragraph 1*/
+    transform: translateX(100vw);
+    transition: 1s;
+}
+.slide3.active3{
+    transform: translateX(0px);
+}
+
+
+
+.slide4{        /*texte 1 paragraph 2 gauche image blanque*/
+    transform: translateX(-100vw);
+    transition: 1s;
+}
+.slide4.active4{
+    transform: translateX(0px);
+}
+
+
+
+.slide5{        /*texte 1 titre paragraph 2*/
+    transform: translateX(-100vw);
+    transition: 1s;
+}
+.slide5.active5{
+    transform: translateX(0px);
+}
+
+
+
+.slide6{        /*titre table et table*/
+    transform: translateY(-10vh);
+    transition: 1s;
+    opacity: 0;
+}
+.slide6.active6{
+    transform: translateY(0px);
+    opacity: 1;
+}

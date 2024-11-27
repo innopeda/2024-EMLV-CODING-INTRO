@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil - AutoPrestige</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header avec logo, menu de navigation et menu hamburger -->
+    <header class="header">
+        <div class="header-contenu">
+            <h1 class="logo">AutoPrestige</h1>
+            <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html" class="active">Accueil</a></li>
+                    <li><a href="voitures.html">Voitures</a></li>
+                </ul>
+                <a href="contact.html" class="btn-contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Section d'accueil avec slogan et image de fond -->
+    <main class="accueil-content">
+        <section class="hero">
+            <h2 class="slogan">Découvrez l'élégance et la puissance de nos véhicules de prestige</h2>
+        </section>
+
+        <!-- Section des dernières voitures mises en vente -->
+        <section class="latest-cars">
+            <h3>Nos dernières offres</h3>
+            <div class="cars-grid">
+                <div class="car-item">
+                    <img src="car1.jpg" alt="Mercedes-Benz Classe S">
+                    <h4>Mercedes-Benz Classe S</h4>
+                    <p>Prix : 80 000 €</p>
+                </div>
+                <div class="car-item">
+                    <img src="car2.jpeg" alt="BMW Série 7">
+                    <h4>BMW Série 7</h4>
+                    <p>Prix : 70 000 €</p>
+                </div>
+                <div class="car-item">
+                    <img src="car3.jpeg" alt="Audi A8">
+                    <h4>Audi A8</h4>
+                    <p>Prix : 75 000 €</p>
+                </div>
+            </div>
+            <a href="voitures.html" class="btn-tout-voir">Voir toutes les voitures</a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <span><a href="https://www.instagram.com/emlv_paris/" class="lien-insta">Notre Insta</a></span>
+    </footer>
+
+    <!-- Script pour le menu hamburger ene javascript -->
+    <script>
+        function toggleMenu() {
+            const navMenu = document.querySelector('.nav-menu');
+            navMenu.classList.toggle('show');
+        }
+    </script>
+</body>
+</html>
+
+

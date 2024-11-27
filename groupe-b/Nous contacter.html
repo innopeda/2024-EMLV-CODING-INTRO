@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html">
+    <title>Nous contacter</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div id="style-formulaire">
+        <ul> 
+            <li><a class="active" href="index.html">Accueil</a></li>
+            <li><a href="Voiture.html">Voiture</a></li>
+            <li><a href="Plein air.html">Plein air</a></li> 
+            <li><a href="Maison.html">Maison</a></li>
+            <li><a href="Nous contacter.html">Nous contacter</a></li> 
+        </ul>
+        
+        <div id="centre">
+            <div id="carte-formulaire">
+                <h2 id="paragraphe-niveau-2">Newsletter</h2>
+                
+                <form id="newsletter-form">
+                    <label for="nom" class="style">Votre Nom :</label><br> 
+                    <input type="text" id="nom" required><br>
+                    
+                    <label for="prenom" class="style">Votre Prénom :</label><br> 
+                    <input type="text" id="prenom" required><br>
+                    
+                    <label for="email" class="style">Votre adresse e-mail :</label><br> 
+                    <input type="email" id="email" required><br> <!-- Ajout de l'attribut id pour le champ e-mail -->
+                    
+                    <h3 id="titre-niveau-3">La meilleure façon de rester en contact :</h3>
+                    <label for="temps" class="style">Quelle fréquence pour notre newsletter ?</label><br> 
+                    <select id="temps">
+                        <option value="Tous les jours">Tous les jours</option>
+                        <option value="Une fois par semaine">Une fois par semaine</option>
+                        <option value="Une fois par mois">Une fois par mois</option>
+                    </select><br><br>
+                </form>
+                
+                <h2 id="paragraphe-niveau-2">Feedback</h2>
+                <form id="feedback-form">
+                    <label for="feedback" class="style">Exprimez-vous :</label>
+                    <textarea id="feedback" name="feedback" rows="4" placeholder="Votre message ici..."></textarea>
+                    
+                    <label class="style"> Échelle de satisfaction :</label>
+                    <div class="satisfaction">
+                        <div class="options" data-value="1"></div>
+                        <div class="options" data-value="2"></div>
+                        <div class="options" data-value="3"></div>
+                        <div class="options" data-value="4"></div>
+                        <div class="options" data-value="5"></div>
+                    </div>
+                    <div class="nombres">
+                        <div class="nombres">1</div>
+                        <div class="nombres">2</div>
+                        <div class="nombres">3</div>
+                        <div class="nombres">4</div>
+                        <div class="nombres">5</div>
+                    </div>
+                
+                    <input id="bouton" type="submit" value="Valider">
+                </form>
+                <img src="./images/smiley.GIF" alt="image" id="smiley-image">
+            </div>
+        </div>
+    </div>
+    
+    <div class="signature">Créé par GILLIN Léa EMLV-A1</div>
+</body>
+</html>

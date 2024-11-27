@@ -1,0 +1,351 @@
+body{  
+    background-color: #FBDA61;
+    background-image: linear-gradient(45deg, #FBDA61 0%, #FF5ACD 100%);
+	height: 100vh;
+}
+/* Page d'Accueil et Cartes*/
+
+.container { /*utilise Flexbox*/ 
+    width: 90%;
+    max-width: 1400px;
+    display: flex; /* méthode vue en cours */
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    height: 100%; /* Hauteur de la fenêtre */
+}
+
+
+.card-container { /* div qui comprend toute la carte, utilise grid*/
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); /*crée des colonnes dynamiques*/
+    grid-gap: 30px; /*Espace entre les elements de la grille*/
+    margin: 80px 0;
+}
+
+.card-wrapper {
+    position: relative;
+    min-height: 350px;
+    perspective: 2000px; 
+    perspective-origin: top;
+}
+
+.card-wrapper:hover .card { /*s'applique qd on survole card-wrapper*/
+    transform: rotateY(180deg);
+}
+
+.card { /*Propriétés des cartes */
+    
+    transform-style: preserve-3d;
+    transition: transform 0.8s cubic-bezier(0.86, 0, 0.7, 1);
+}
+
+.card-face, /*Styles définis pour le devant et l'arrière des cartes*/
+.card-arriere {
+    position: relative;
+    height: 500px;/* La hauteur */
+    width: 550px; /*  La largeur  */
+    padding: 30px;
+    border-radius: 8px;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden; /* Pour ne pas voir le coté opposé de la carte */
+}
+
+.card-face { /*Style face avant de la carte */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #FFDEE9;
+    background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
+    border-radius: 15px;
+    overflow: hidden; 
+    max-width: 400vw; /* Taille maximale pour éviter qu'elle ne devienne trop grande */
+    max-height: 300vw; /* Taille maximale de la hauteur */
+    margin: auto;  
+    position: absolute;  
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card-arriere {
+    background-color: #FFDEE9;
+    background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
+    transform: rotateY(180deg); /* Rotation 180 degrés */
+    display: flex;
+    flex-direction: column; /* Colonne pour aligner le texte verticalement */
+    justify-content: center; /* Centre le texte verticalement */
+    align-items: center; /* Centre le texte horizontalement */
+    padding: 20px; /* Ajoutez de l'espacement intérieur */
+}
+.card-text { /*Positionnement de la flèche en bas à gauche*/
+    position: absolute; /* Positionnement absolu par rapport à .card */
+    bottom: 10px; /* Distance bas de la carte */
+    right: 10px; /* Distance à droite de la carte */
+    color: white; 
+    font-size: 30px; 
+    padding: 5px; 
+    border-radius: 5px; /* petits Bords arrondis  */
+}
+.card-arriere p { /*Propriétés des paragraphes*/
+    margin: 10px 0; /* espacement entre paragraphes */
+    text-align: center; /* Centre texte */
+    color: black; 
+    font-size: 22px; 
+    font-weight: bold;
+}
+#astuce {
+    border-radius: 50%;
+    border: 3px solid white; /* Contour */
+    height: 300px;
+    width: 300px;
+    transform: translateY(-50px); /* Permet remonter l'image */
+}
+.image-container {
+    display: flex;
+    justify-content: center; 
+    align-items: flex-start; /* Aligner en haut */
+    width: 100%; /* Adapte à la largeur de la page */
+    margin-top: -20px; /* Ajuste pour remonter l'image */  
+}
+h1{
+    text-align: center;
+}
+h2{
+    text-align: center;
+    font-style: italic;
+    color:purple; 
+    font-family: 'Roboto', sans-serif;
+}
+#astucesimg { /*Propriétés images des menus (voiture,plein air,maison)*/
+    margin: auto;
+    display: block;
+    width: 750px; /* Largeur fixe */
+    height: 550px; /* Hauteur fixe */
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 7px 3px 3px black;
+}
+
+
+/*Position menu deroulant */
+ul {
+    list-style-type: none;
+    padding: 10px; /* Ajoute un peu d'espacement à l'intérieur */
+    margin: 0;
+    display: flex;
+    position: fixed;
+    top: 2px;
+    left: 2px;
+    z-index: 1000;
+}
+
+li {
+    margin: 0; /* Retire l'espacement autour des éléments */
+}
+
+a {
+    display: flex; /*  centrer le texte */
+    justify-content: center;
+    align-items: center;
+    width: 100px; /* Largeur du rectangle */
+    height: 30px; /* Hauteur du rectangle */
+    background-color: #3498db; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    text-decoration: none;
+    border-radius: 10px; /* Bords arrondis */
+    transition: background-color 0.3s ease;
+    text-align: center;
+    font-size: 1em; /* Ajuste la taille du texte */
+    margin: 0 5px; /* Espace entre les éléments du menu */
+}
+
+a:hover {
+    background-color: #2980b9; /* Couleur au survol */
+}
+
+@media (max-width: 600px) {
+    a {
+        padding: 10px 15px; /* Réduit l’espace pour les petits écrans */
+        font-size: 0.9em; /* Diminue légèrement la taille du texte */
+    }
+}
+ 
+
+
+#img{
+    margin: auto;
+    display: block;
+    border: 1px solid black;
+    box-shadow: 10px 5px 5px black;
+    border-radius: 5px;
+    height: 400px;
+    width:500px;
+}
+a:hover{
+    /*hover désigne le survol par la souris.*/
+    color: #da6335;
+    font-weight: bold;
+    margin: 5px;
+}
+
+table, td, tr{
+    margin: 20px auto;
+    padding:5px;
+    border-collapse: separate;
+    border-radius: 15px;
+}
+
+
+td{
+    width: 200px;
+    height: 100px;
+    text-align: center;
+    background-color: #afeeee;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 20px; 
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    border: 1px solid black;
+}
+
+td:hover{
+    /*hover désigne le survol par la souris.*/
+    background-color: #d6cc17;
+    font-weight: bold;
+}
+/* Formulaire de contacts*/ 
+.style-formulaire {
+    background-color: #FFDEE9;
+    background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
+}
+
+#paragraphe-niveau-2 { /* Proprietes Titres h2*/
+    font-size: 5vw;
+    font-family: Courier New, monospace;
+    color: white;  
+    margin-bottom: 20px; /* Ajoute un espace en bas du titre */
+    margin: 0;
+    padding-top: 10px;
+}
+
+#titre-niveau-3 { /* Proprietes Titres h3*/
+	font-size: 20px;
+    font-family: Courier New, monospace;
+    color: white; 
+}
+
+#paragraphe{ /* Proprietes  des paragraphes */
+	font-size: 20px;
+    margin-bottom: 15px;
+    font-family: Courier New, monospace;
+}
+
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;  /* Centrer horizontalement */
+    align-items: center;      /* Centrer verticalement */
+
+}
+form { /* Proprietes Questionnaire */
+    margin-top: 20px;
+}
+
+#carte-formulaire{
+    box-align:"center";
+    margin: 80px;
+    padding: 20px;
+    background-color: pink;
+    color:black;
+    width: 550px;
+    border: 5px solid white;
+    height: 650px;
+    position: relative;
+    text-align: center; /* Ajout pour centrer le texte */
+}
+.nombres{
+    display: flex;
+    justify-content: space-around; /* Centre les chiffres sous l'échelle */
+    margin-top: 5px; /* Espace entre l'échelle et les chiffres */
+    color:black;
+}
+.options { /*Petits ronds au dessus des chiffres*/
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    background-color: white;
+}
+.satisfaction { /*Permet d'aligner horizontalement les cercles*/
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+#feedback {
+    width: 80%; /* Réduit la largeur à 80% */
+    height: 40px; /* Hauteur ajustée */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    display: block; 
+    margin: 0 auto; /* Centre horizontalement */
+}
+#bouton {
+    background-color: #34dbd3;
+    color: white;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px; /* Espacement en haut */
+    display: block;
+    margin-left: auto;
+    margin-right: auto; /* Centre le bouton */
+}
+.signature {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    font-size: 14px;
+    color: #885ec8; /* Couleur du texte */
+    font-family: Arial, sans-serif;
+    background-color: rgba(255, 255, 255, 0.8); /* Fond légèrement transparent */
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Légère ombre pour le style */
+    z-index: 1000;
+
+}
+textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    resize: none;
+}
+.style{
+    font-family: 'Roboto', sans-serif;
+}
+#smiley-image {
+    
+    position: absolute; /* Position absolue pour placer en haut à droite */
+    top: 110px; /* Ajuste la distance par rapport au haut */
+    right: 10px; /* Ajuste la distance par rapport à la droite */
+    height: 60px;
+    width: 70px;
+    border-radius: 40%;/* Rend le contour de l'image rond */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);/* Ajoute une ombre pour un effet de relief */
+    background-position: center;
+    background-size: cover;
+}
+

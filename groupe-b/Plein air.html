@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html">
+    <title>Astuces Plein Air</title>
+    <link href="style.css" rel="stylesheet">
+    <script type="text/javascript" src="scripts.js"></script>
+</head>
+<body>
+    <ul> 
+        <li><a class="active" href="index.html">Accueil</a></li>
+        <li><a href="Voiture.html">Voiture</a></li>
+        <li><a href="Plein air.html">Pleinair</a></li> 
+        <li><a href="Maison.html">Maison</a></li>
+        <li><a href="Nous contacter.html">Nous contacter</a></li> 
+    </ul>
+
+    <div id="astuces-script">
+        <table>
+            <tr>
+                <td onclick="changeImg('./images/desherbant.jpg')">Désherbant</td>
+                <td onclick="changeImg('./images/engrais.jpg')">Engrais et insecticides</td>
+                <td onclick="changeImg('./images/limaces.jpg')">Répulsif limaces et escargots</td>
+                <td onclick="changeImg('./images/grille-barbecue.jpg')">Dégraissant grille Barbecue</td>
+                <td onclick="changeImg('./images/goutte.jpg')">Goutte-à-goutte pour l'arrosage</td>
+            </tr>
+        </table>
+
+        <img id="astucesimg" src="./images/jardin.jpeg" alt="Image du jardin avec astuces plein air">
+    </div>
+
+    <div class="signature">Créé par GILLIN Léa EMLV-A1</div>
+</body>
+</html>

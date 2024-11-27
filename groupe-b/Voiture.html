@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html">
+    <title>Voiture</title>
+    <link href="style.css" rel="stylesheet">
+    <script type="text/javascript" src="scripts.js"></script>
+</head>
+<body>
+    <ul> 
+        <li><a class="active" href="index.html">Accueil</a></li>
+        <li><a href="Voiture.html">Voiture</a></li>
+        <li><a href="Plein air.html">Plein air</a></li> 
+        <li><a href="Maison.html">Maison</a></li>
+        <li><a href="Nous contacter.html">Nous contacter</a></li> 
+    </ul>
+    
+    <div id="image">
+        <table id="resto">
+            <tr>
+                <td onclick="changeImg('./images/detachant.jpg')">Détachant sièges</td>
+                <td onclick="changeImg('./images/nettoyant-carrosserie.jpg')">Nettoyant carrosserie</td>
+                <td onclick="changeImg('./images/antibuee-vitres.jpg')">Antibuée vitres</td>
+                <td onclick="changeImg('./images/degivrant.jpg')">Dégivrant</td>
+                <td onclick="changeImg('./images/desodorisant.jpg')">Désodorisant</td>
+            </tr>
+        </table>
+
+        <img id="astucesimg" src="./images/renault.jpeg" alt="Image de conseils d'astuces pour voiture">
+    </div>
+
+    <div class="signature">Créé par GILLIN Léa EMLV-A1</div>
+</body>
+</html>
