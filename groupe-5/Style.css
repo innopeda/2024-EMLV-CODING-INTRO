@@ -1,0 +1,142 @@
+p{ 
+    text-align: center;
+    font-size: 20px;
+}
+
+header{ 
+    border-bottom: 4px solid;
+    border-color: rgb(154, 159, 184);
+    margin: 30px;
+    padding: 20px;
+    font-size: 30px;
+    background:rgb(181, 189, 229) ;
+     
+}
+
+.LOGO {
+  margin-right: 500px;
+}
+ body{
+    background-color: rgb(210, 219, 240);
+ }
+
+ #subtitle {
+    color: black;
+    font-size: 40px;
+  }
+
+  .old-standard-tt-regular {
+    font-family: "Old Standard TT", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .fredoka {
+   font-family: "Fredoka", sans-serif;
+   font-optical-sizing: auto;
+   font-weight: weight;
+   font-style: normal;
+ }
+
+ #logo {
+   height: 17vh;
+   width: 12vw;
+   border-radius: 50px;
+   margin-right: 30px;
+ }
+
+ .rubrique {
+  font-size: 20px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover{
+  color: rgb(195, 221, 225);
+  text-decoration: none;
+}
+
+a:active{
+  color: rgb(186, 213, 221);
+  text-decoration: none;
+}
+
+#croisiere {
+  color: black;
+  padding: 8px;
+  margin: 5px;
+  background-color: rgb(242, 227, 248);
+  display: inline-block;
+  vertical-align: top;
+}
+
+
+#homepicture {
+  height: 40vh;
+  width: 40vw;
+  border-radius: 5px;
+  margin: 20px;
+  border: 5px solid;
+  border-color: rgb(163, 167, 226);
+  border-style: dashed;
+  
+}
+
+h2 {
+  font-size: 20px;
+  border: 3px solid;
+  border-color: rgb(163, 167, 226);
+  border-radius: 3px;
+  border-style: groove;
+
+}
+
+#content {
+  font-size: 15px;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 12px;
+  margin-right: 12px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.quicksand {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+#onglet {
+  background-color: rgb(198, 182, 219);
+  font-size: 18px;
+  border: 3px solid;
+  border-color: rgb(163, 167, 226);
+  border-radius: 3px;
+  border-style: double;
+  margin-left: 12px;
+  padding-left: 12px;
+  margin-right: 12px;
+  padding-right: 12px;
+}
+
+ @media screen and (max-width : 800px) {
+  body {
+    font-size: auto;
+    scrollbar-width: auto;
+    width: auto;
+  }
+  #logo{
+    width: auto;
+  }
+  header{
+    font-size: auto;
+  }
+  #homepicture{
+  width : auto;
+  }
+}

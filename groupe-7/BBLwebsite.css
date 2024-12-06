@@ -1,0 +1,190 @@
+/* Base */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: aliceblue;
+  }
+  
+  /* Header */
+  header {
+    background-color: midnightblue; 
+    color: cornflowerblue; 
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 2em;
+    font-family: Elephant;
+  }
+
+  nav a {
+    color: #ffffff;
+  }
+  
+  /* Main content */
+  main {
+    padding: 20px;
+    text-align: center;
+    font-size: 1.8em;
+    font-family: Blackadder ITC;
+    color: cornflowerblue;
+  }
+  
+  /* Subtitle styling */
+  sub {
+    font-family: Elephant;
+    color: cornflowerblue;
+    font-size: medium;
+    text-align: center;
+  }
+  
+  /* Section headings */
+  section {
+    font-family: Bradley Hand ITC;
+    font-weight: bold;
+  }
+  
+  h2 {
+    font-family: Blackadder ITC;
+  }
+  
+  /* Card styling */
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+    justify-content: center;
+  }
+  
+  .card {
+    border: 2px solid #0073e6;
+    border-radius: 10px;
+    padding: 20px;
+    width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f0f8ff;
+    text-align: center;
+  }
+  
+  .card-title {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #003366;
+    font-family: Elephant;
+  }
+  
+  .card-content {
+    font-size: 16px;
+    color: #333;
+    font-family: Elephant;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 14px;
+    color: #666;
+    font-family: Elephant;
+    padding: 1em 0;
+    background-color: #f0f8ff;
+  }
+  
+  /* Gallery */
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 20px; 
+    justify-items: center; 
+  }
+  
+  .gallery img {
+    width: 200px; 
+    height: 200px;
+    object-fit: cover; 
+  }
+  
+  /* Flash-info section on page 3 */
+  .bbl-body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .bbl-header {
+    background-color: midnightblue;
+    color: cornflowerblue;
+    width: 100%;
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .bbl-header h1 {
+    margin: 0;
+  }
+  
+  /* Flash-info boxes */
+  .flash-info {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    width: 90%;
+    max-width: 800px;
+    margin-top: 2rem;
+  }
+  
+  .flash-info-box {
+    background-color: #ffffff;
+    border: 2px solid #005580;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 1.2rem;
+    text-align: center;
+    color: cornflowerblue;
+    transition: transform 0.2s ease-in-out;
+    font-family: Bradley Hand ITC;
+    font-weight: bold;
+  }
+  
+  .flash-info-box:hover {
+    transform: scale(1.02);
+  }
+  
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    /* Card layout on smaller screens */
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+  
+    /* Flash-info layout for tablets */
+    .flash-info {
+        grid-template-columns: 1fr;
+    }
+  
+    /* Gallery image styling */
+    .gallery img {
+        width: 100%;
+        height: auto;
+    }
+  }
+  
+  /* Larger screens */
+  @media (min-width: 768px) {
+    .flash-info {
+        grid-template-columns: 1fr 1fr;
+    }
+  }
