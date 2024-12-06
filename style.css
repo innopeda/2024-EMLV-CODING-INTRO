@@ -37,7 +37,7 @@ body {
     gap: 20px;
 }
 
-h1 {
+h1, h2 {
     max-width: 1400px;
     margin: 0 auto;
     padding: 16px;
